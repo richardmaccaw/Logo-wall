@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <title>Logo Wall</title>
+        <link href="/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class='container-fluid bg-purple'>
+            <h1>Logo wall</h1>
+            <h2>Make a beautiful logo wall in minutes</h2>
+            <div id="powered-by">Powered by <a href='www.clearbit.com' target='blank'>Clearbit</a></div>
+        </div> 
+        <div> 
+            <form class='bg-purple' id="domain" autofocus>
+                <input type="text" placeholder="add a website here" name="domain" required>
+                <button class="button">Submit</button>
+                <button class ="button" id="clearButton">Clear</button>
+             </form>
+        </div>
+        <div id='logos' class='flex-container'></div>
+        <script src="app.js"></script>
+    </body>
+</html>
+
