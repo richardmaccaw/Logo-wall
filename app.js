@@ -13,9 +13,7 @@ document.querySelector('#domain').addEventListener('submit', function (e) {
 // Clear logos from the DOM
 document.querySelector('#clearButton').addEventListener('click', function (e) {
     e.preventDefault()
-    console.log('you are the best')
     document.querySelectorAll(".logoDiv").forEach(e => e.parentNode.removeChild(e))
-    placeHolder()
 })
 
 // Render logos to the DOM
@@ -34,14 +32,14 @@ const getClearbitURL = (domains) => {
 }
 
 
-// Sticky nav
-window.onscroll = function() {myFunction()};
-const navbar = document.querySelector('#domain')
-const sticky = navbar.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+// // Sticky nav
+// window.onscroll = function() {myFunction()};
+// const navbar = document.querySelector('#domain')
+// const sticky = navbar.offsetTop;
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
