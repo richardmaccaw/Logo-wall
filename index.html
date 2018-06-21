@@ -7,26 +7,24 @@
         <link href="/styles.css" rel="stylesheet">
     </head>
     <body>
-        <div class='container-fluid bg-purple'>
-            <h1>Logo wall</h1>
-            <h2>Make a beautiful logo wall in minutes</h2>
-            <div id="powered-by">Powered by <a href='www.clearbit.com' target='blank'>Clearbit</a></div>
-        </div> 
-        <div> 
-            <form class='bg-purple' id="domain" autofocus>
-                <input type="text" placeholder="add a website here" name="domain" required>
-                <button class="button">Submit</button>
+        <div class="bg-color">
+            <div class="flex-container">
+                <img src="/logowall.png" alt="Logowall">
+                <h4>Logo wall</h1>
+            </div>
+            <h2>Make a beautiful logo wall in seconds</h2>
+            <div id="powered-by">Logos by <a href='www.clearbit.com' target='blank'>Clearbit</a></div>
+                    
+            <form id="textareaForm">
+                <textarea name='textarea' rows='3' cols='80' required placeholder='Type / paste in some websites on separate lines to get started...'></textarea>
+                <br><input class="button" type="submit">
                 <button class ="button" id="clearButton">Clear</button>
-             </form>
-        </div>
-        <div id='logos' class='flex-container'></div>
-        <div>
-            <form class='bg-purple' id="web-domains-form">
-                <textarea name='web-domains-textarea' rows='10' cols='60'></textarea>
-                <input type="submit">
+                <label class='checkbox'><input type="checkbox" id="greyscale" unchecked> Greyscale</label>
             </form>
         </div>
-        <script src="app.js"></script>
+        
+        <div id='logos' class='flex-container logo-section'></div>
+        
+        <script src="app.js"></script>       
     </body>
 </html>
-
