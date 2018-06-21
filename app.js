@@ -1,45 +1,63 @@
 let domains = []
-  
-// Form execution
-document.querySelector('#domain').addEventListener('submit', function (e) {
+let errors = []
+let greyscale = []
+let size = []
+
+// submit button function
+document.querySelector('#textareaForm').addEventListener('submit', function (e) {
     e.preventDefault()
-    domains = []
-    const inputtedDomains = e.target.elements.domain.value
-    domains.push(inputtedDomains)
-    renderLogos(domains)
+    removeLogos()
+    domains = e.target.elements.textarea.value.split('\n')
+    getChecked()
+    getLogos(domains)
+}) 
 
-})
-
-// Clear logos from the DOM
+// clear button function
 document.querySelector('#clearButton').addEventListener('click', function (e) {
     e.preventDefault()
-    document.querySelectorAll(".logoDiv").forEach(e => e.parentNode.removeChild(e))
+    removeLogos()
 })
 
-// Render logos to the DOM
-const renderLogos = (domains) => {
-    domains.forEach(function(domains) {
-        const logoEl = document.createElement('div')
-        logoEl.className = "logoDiv"
-        logoEl.innerHTML = getClearbitURL(domains)
-        document.querySelector('#logos').appendChild(logoEl)
+// set greyscale button
+document.querySelector('#greyscale').addEventListener('change', function (e) {
+    e.preventDefault()
+    removeLogos()
+    const checkCheckbox = document.getElementById("greyscale").checked
+    if (checkCheckbox) {
+        greyscale = '&greyscale=true'
+        getLogos(domains)
+    } else {
+        greyscale = []
+        getLogos(domains)
+    }  
+})
+
+
+// Get logos
+const getLogos = function (domains) {
+    domains.forEach((domain) => {
+        const logo = document.createElement('img')
+        logo.id = 'logo'
+        logo.src = 'https://logo.clearbit.com/' + domain + '?size=200' + greyscale       
+        logo.onerror = function () {
+            logo.remove()
+            errors.push(domain)
+        }
+        document.querySelector('#logos').appendChild(logo)
     })
 }
 
-// Format Clearbit call
-const getClearbitURL = (domains) => {
-    return `<img src="https://logo.clearbit.com/${domains}?size=200">`
+// Remove logos
+const removeLogos = () => {
+    document.querySelectorAll('#logo').forEach(e => e.parentNode.removeChild(e))
 }
 
-
-// // Sticky nav
-// window.onscroll = function() {myFunction()};
-// const navbar = document.querySelector('#domain')
-// const sticky = navbar.offsetTop;
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
+// Check greyscale checkbox
+getChecked = () => {
+    const checkCheckbox = document.getElementById("greyscale").checked
+    if (checkCheckbox) {
+        greyscale = '&greyscale=true'
+    } else {
+        greyscale = []
+    }  
+}
