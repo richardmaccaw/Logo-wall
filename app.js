@@ -1,7 +1,6 @@
 let domains = []
 let errors = []
 let greyscale = []
-let size = []
 
 // submit button function
 document.querySelector('#textareaForm').addEventListener('submit', function (e) {
