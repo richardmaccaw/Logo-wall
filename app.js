@@ -9,6 +9,8 @@ document.querySelector('#textareaForm').addEventListener('submit', function (e) 
     domains = e.target.elements.textarea.value.split('\n')
     getChecked()
     getLogos(domains)
+    const scrollToLogos = document.querySelector("#logos")
+    scrollToLogos.scrollIntoView({behavior: 'smooth'})
 }) 
 
 // clear button function
