@@ -1,6 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
+.bg-color {
+    background: #6441A5;
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
+    background: linear-gradient(to right, #2a0845, #6441A5);
+    padding: 5%;
+    min-height: fit-content;
+}
+
+.logo-header {
+    display: inline;
+    padding-bottom: 25px;
 }
 
 .button {
@@ -15,21 +23,10 @@
     margin-right: 15px;
     margin-top: 15px;
     transition: all .3s ease, all .3s ease;
-
-}
-
-.logo-header {
-    display: inline;
-    padding-bottom: 25px;
 }
 
 .button:hover {
     background: rgba(255, 255, 255, 0.719);
-}
-
-h1 {
-    color: white;
-    font-size: 100px;
 }
 
 h2 {
@@ -39,6 +36,7 @@ h2 {
     font-size: 60px;
     text-align: center;
 }
+
 h3 {
     color:rgba(255, 255, 255, 0.822);
     padding-bottom: 50px;
@@ -51,11 +49,6 @@ h4 {
     padding-left: 15px;
 }
 
-p {
-    color: rgba(255, 255, 255, 0.822);
-    font-size: 20px;
-    font-weight: lighter;
-}
 
 #powered-by {
     color: rgba(255, 255, 255, 0.493);
@@ -65,15 +58,15 @@ p {
 }
 
 a {
-    color: 0B132B;
-    text-decoration: none;
+    color: rgba(255, 255, 255, 0.493);
+    text-decoration: underline;
     transition: all .3s ease, all .3s ease;
 }
 
 a:hover{
     color: rgba(255, 255, 255, 0.39);
     transition: all .5s ease, all .5s ease;
-    text-decoration: unset;
+    text-decoration: underline;
 
 }
 
@@ -90,17 +83,6 @@ form {
 ::-webkit-input-placeholder {
     color: rgb(148, 151, 156);
     text-align: center;
-
-}
-
-
-.bg-color {
-    background: #6441A5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    padding: 5%;
-    height: 100%;
 }
 
 .flex-container {
@@ -108,8 +90,8 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    padding: 10px;
 }
-
 
 textarea {
     color: rgb(148, 151, 156);
@@ -120,7 +102,6 @@ textarea {
     max-width: 66%;
 }
 
-
 .checkbox {
     color: rgb(255, 255, 255);
     padding-right: 20px;
@@ -129,5 +110,5 @@ textarea {
 label {
     color: white;
     padding-right: 15px;
-    
+
 }
