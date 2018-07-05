@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <title>Logo Wall</title>
         <link href="/styles.css" rel="stylesheet">
-        <link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="icon" type="image/png" href="favicon.png">
     </head>
     <body>
         <div class="bg-color">
